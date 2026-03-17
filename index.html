@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #5C4033; 
+            color: white; 
+            font-family: sans-serif;
+            text-align: center;
+        }
+#button-group {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Here are the buttons styled like the image */
+        button {
+            background-color: #92e000; /* Matching bright green */
+            color: white;             /* White text */
+            font-weight: bold;        /* Bold text */
+            padding: 15px 40px;       /* Spacing for pill shape */
+            border-radius: 50px;      /* Full pill shape */
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;        /* Text size */
+            transition: 0.1s;         /* Quick tap effect */
+        }
+
+        button:active {
+            transform: scale(0.95); /* Button shrinks a tiny bit on tap */
+        }
+</style>
+</head>
+<body>
+ <h1 id="main-text">Are you ready?</h1>
+
+<div id="button-group">
+    <button onclick="nextPage()">YES</button>
+    <button onclick="nextPage()">YES</button>
+</div>
+<script>
+let page = 1;
+function nextPage() {
+page = page + 1;
+let textElement = document.getElementById("main-text");
+if (page == 2) {
+    textElement.innerText = "Are you sure?";
+}
+</script>   
+</body>
+</html>
